@@ -1,9 +1,5 @@
 #! /local/ruby/bin/ruby
 #
-# $Id: stemmable.rb,v 1.2 2003/02/01 02:07:30 condit Exp $
-#
-# See example usage at the end of this file.
-#
 
 module Stemmable
 
