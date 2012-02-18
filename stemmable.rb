@@ -193,8 +193,8 @@ end
 
 
 #
-# Make this script executable, and send it words on stdin, one per
-# line, and it will output the stemmed versions to stdout.
+# Make this script executable, and send it words on from args, 
+# and it will output the stemmed versions to stdout.
 #
 if $0 == __FILE__ then
   class String
@@ -204,9 +204,7 @@ if $0 == __FILE__ then
   # the String class, and any subclasses of it you might have, now know
   # how to stem things.
 
-  $stdin.each do |word|
+  ARGV.each do |word|
     puts word.stem
   end
 end
-
-
