@@ -1,4 +1,5 @@
 require 'engtagger'
+require_relative 'stemmable'
 
 tgr = EngTagger.new
 
@@ -6,4 +7,7 @@ text = "Co-founder at Meeteor. I'm a Technology Entrepreneur and have a passion 
 
 tagged = tgr.add_tags(text)
 nouns = tgr.get_nouns(tagged)
-puts nouns
+
+nouns.each do |key, value|
+  puts key.stem
+end
